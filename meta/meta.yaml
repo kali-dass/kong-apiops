@@ -1,0 +1,5 @@
+_info:
+    select_tags:
+    - ${service_name}
+    - cards
+    - testtag1

@@ -1,0 +1,38 @@
+_format_version: "3.0"
+services:
+- host: localhost
+  name: Swagger_Petstore
+  path: /$%7Bswagger_petstore_url%7D
+  port: 80
+  protocol: http
+  routes:
+  - methods:
+    - GET
+    name: Swagger_Petstore-listPets
+    paths:
+    - ~/pets$
+    strip_path: false
+    tags:
+    - OAS3_import
+    - OAS3file_petstore_swagger.yaml
+  - methods:
+    - POST
+    name: Swagger_Petstore-createPets
+    paths:
+    - ~/pets$
+    strip_path: false
+    tags:
+    - OAS3_import
+    - OAS3file_petstore_swagger.yaml
+  - methods:
+    - GET
+    name: Swagger_Petstore-showPetById
+    paths:
+    - ~/pets/(?<petId>[^/]+)$
+    strip_path: false
+    tags:
+    - OAS3_import
+    - OAS3file_petstore_swagger.yaml
+  tags:
+  - OAS3_import
+  - OAS3file_petstore_swagger.yaml
